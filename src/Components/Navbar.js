@@ -1,7 +1,5 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import Logo from "../Assets/Logo.png";
-import {BiFoodMenu } from "react-icons/bi";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -57,20 +55,21 @@ const Navbar = () => {
                             onChange={(e) => setInput(e.target.value)}
                             type="text"
                             placeholder="Search Recipe"
-                            size={50}
+                            size={40}
+                            className="searchInput"
                         />
                     </form>
                 </div>
       <div className="navbar-links-container">
         <Link to="Home">Home</Link>
         <Link to="About">About</Link>
-        <Link to="Recipe">Recipe</Link>
+        <Link to="Recipe">Recipes</Link>
         <Link to="Contact">Contact</Link>
-        <Link to="Myrecipe">
-          <BiFoodMenu className="navbar-menu-icon" />
-        </Link>
         <a href="/Signup">
         <button className="primary-button">Sign Up</button>
+        </a>
+        <a href="/Login">
+          <button className="primary-button">Login</button>
         </a>
       </div>
       <div className="navbar-menu-container">

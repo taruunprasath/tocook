@@ -16,7 +16,6 @@ const RecipeId = () => {
         const api = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`)
         const data = await api.json();
   
-        // console.log(data.meals);
         setData(data.meals[0])
         console.log(data)
       }
@@ -31,14 +30,14 @@ const RecipeId = () => {
         width:'90%' ,
         margin:'auto',
         textAlign:'center',
-        color:"white"
+        color:"black"
     }}
     >
       <h1>{data.strMeal}</h1>
       <div 
        style={{
        display:'flex',
-       color: "white"
+       color: "black"
     }}
       >
         

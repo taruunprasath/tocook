@@ -4,7 +4,7 @@ import { useParams,Link } from 'react-router-dom'
 
 
 const Search= () => {
-    // console.log(useParams())
+
     const {searchTerm} = useParams();
 
     
@@ -16,9 +16,9 @@ const Search= () => {
         const api = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`)
         const data = await api.json();
   
-        // console.log(data.meals);
+        
         setData(data.meals)
-        // console.log(data)
+        
       }
   
       fetchData();

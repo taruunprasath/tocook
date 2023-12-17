@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
 import Hero from './Hero';
-import Hero2 from './Hero2';
 
 const Home = () => {
   const [data, setData] = useState([])
@@ -15,7 +14,7 @@ const Home = () => {
       const api = await fetch("https://www.themealdb.com/api/json/v1/1/search.php?s")
       const data = await api.json();
 
-      // console.log(data.meals);
+  
       setData(data.meals)
     }
 
@@ -24,7 +23,7 @@ const Home = () => {
 
 
   var settings = {
-    // dots: true,
+    
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -38,9 +37,9 @@ const Home = () => {
       <div style={{
         height:'56vh',
         width:'90%',
-        margin:'auto',
+        margin:'auto'
       }} > 
-      <Hero />
+      
 
         <Slider {...settings}
       style={{
@@ -57,8 +56,9 @@ const Home = () => {
             )
           })}
         </Slider>
+        <Hero />
 
-        <Hero2 />
+       
         
       
       </div>

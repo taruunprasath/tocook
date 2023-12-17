@@ -6,18 +6,20 @@
     box-sizing: border-box;
 }
 .main_container_signup{
-    background:#f6f6f6;
+    background:#ff3700;
     padding: 20px 30px;
     margin: 400px;
     margin-top: 100px;
     border-top: 10px #f9f904;
+    border-radius: 5px;
+    border-color: 5px #f9f904;
 }
 .main_container_signup .header{
     width: 100%;
 }
 .main_container_signup .header h2{
     text-align: center;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 600;

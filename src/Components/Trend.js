@@ -13,7 +13,7 @@ const Trend = () => {
       const api = await fetch("https://www.themealdb.com/api/json/v1/1/filter.php?a=Canadian")
       const data = await api.json();
 
-      // console.log(data.meals);
+      
       setData(data.meals)
     }
 
@@ -22,7 +22,7 @@ const Trend = () => {
 
 
   var settings = {
-    // dots: true,
+
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -39,7 +39,6 @@ const Trend = () => {
         width:'99%',
         margin:'auto',
         overflowX:'hidden'
-        // backgroundColor:'yellow'
       }} >
 
         <Slider {...settings}

@@ -1,9 +1,9 @@
 import React from "react";
 import Logo from "../Assets/Logo.png";
-import { BsTwitter } from "react-icons/bs";
+import { FaInstagram } from "react-icons/fa";
 import { SiLinkedin } from "react-icons/si";
-import { BsYoutube } from "react-icons/bs";
-import { FaFacebookF } from "react-icons/fa";
+import { BsWhatsapp } from "react-icons/bs";
+import "../App.css";
 
 const Footer = () => {
   return (
@@ -13,26 +13,21 @@ const Footer = () => {
           <img src={Logo} alt="" />
         </div>
         <div className="footer-icons">
-          <BsTwitter />
+          <FaInstagram />
           <SiLinkedin />
-          <BsYoutube />
-          <FaFacebookF />
+          <BsWhatsapp />
         </div>
       </div>
       <div className="footer-section-two">
         <div className="footer-section-columns">
-          <span>Qualtiy</span>
-          <span>Help</span>
-          <span>Share</span>
-          <span>Carrers</span>
-          <span>Recipe</span>
-          <span>Work</span>
+          <span><a href="https://www.linkedin.com/in/taruun-prasath-g-s-17022624b/">Taruun Prasath</a></span>
+          <span><a href="https://www.linkedin.com/in/parvadaesh-s-eee-b16a29259/">Parvadaesh</a></span>
+          <span><a href="https://www.linkedin.com/in/dhana-sekar-412b49257/">Dhanasekar</a></span>
         </div>
         <div className="footer-section-columns">
           <span>+91 7904837587</span>
-          <span>taruunprasath@gmail.com</span>
-          <span>dondhanush@gmail.com</span>
-          <span>parvadaesh12@gmail.com</span>
+          <span>+91 8825730740</span>
+          <span>+91 8098584040</span>
         </div>
         <div className="footer-section-columns">
           <span>Terms & Conditions</span>

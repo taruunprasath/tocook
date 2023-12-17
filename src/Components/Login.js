@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import './signin.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom';
 import firebase from '../firebaseConfig';
 
 const Login = () => {
   const [email,setEmail] = useState('')
   const [pass,setPass] = useState('')
+  const navigate = useNavigate();
 
   const submit = async(e) =>
   {
@@ -15,7 +16,9 @@ const Login = () => {
        const user = await firebase.auth().signInWithEmailAndPassword(email, pass)
        if(user)
        {
-         alert("Login Successfully")
+         alert("Login Successful")
+         navigate('/Home');
+
        }
     } 
     catch (error) 
@@ -36,9 +39,7 @@ const Login = () => {
             <input type="password" value={pass} placeholder="Password" onChange={(e)=> setPass(e.target.value)}></input>
         </div>
         <p>Don't Have an Account? <Link to="/Signup"><>Create Account</></Link> </p>
-        <a href="/Home">
         <button onClick={submit}>Login</button>
-        </a>
       </div>
     </div>
   )

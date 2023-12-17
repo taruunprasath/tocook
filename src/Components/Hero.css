@@ -1,7 +1,7 @@
 .hero_content h2{
     font-weight: 600;
     line-height: 55px;
-    background-color: aliceblue;
+    background-color: rgb(158, 174, 188);
 }
 .hero_content{
     padding-top: 80px;
@@ -41,5 +41,6 @@
     box-shadow: -1px 1px 62px -18px rgb(10, 10, 10);
 }
 .text{
-    color: azure;
+    color: rgb(139, 139, 139);
 }
+

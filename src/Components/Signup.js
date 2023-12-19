@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Signup.css'
 import { Link, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify';
 import firebase from '../firebaseConfig';
 
 const Signup = () => {
@@ -17,7 +18,7 @@ const Signup = () => {
        const user = await firebase.auth().createUserWithEmailAndPassword(email, pass)
        if(user)
        {
-         alert("Account Created Successfully")
+        toast.success('Signup successful!');
          navigate("/Login")
        }
     } 

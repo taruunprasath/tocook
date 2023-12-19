@@ -1,3 +1,4 @@
+// Navbar.js
 import React, { useState } from "react";
 import Logo from "../Assets/Logo.png";
 import { HiOutlineBars3 } from "react-icons/hi2";
@@ -14,8 +15,15 @@ import InfoIcon from "@mui/icons-material/Info";
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import { Link, useNavigate } from 'react-router-dom'
-const Navbar = () => {
 
+
+
+// Navbar.js
+import { useAuth } from './AuthContext';
+
+
+const Navbar = () => {
+  const { user, logout } = useAuth();
   const navigate = useNavigate()
   const [input, setInput] = useState('')
 
@@ -61,21 +69,28 @@ const Navbar = () => {
                         />
                     </form>
                 </div>
+      {/* ... (your existing code) */}
       <div className="navbar-links-container">
         <Link to="Home">Home</Link>
         <Link to="About">About</Link>
         <Link to="Recipe">Recipes</Link>
         <Link to="Contact">Contact</Link>
-        {true && <a href="/Signup">
-          
-        <button className="primary-button">Sign Up</button>
-        </a>
-}
-
-        <a href="/Login">
-          <button className="primary-button">Login</button>
-        </a>
+        {user ? (
+          <button className="primary-button" onClick={logout}>
+            Logout
+          </button>
+        ) : (
+          <React.Fragment>
+            <Link to="/Signup">
+              <button className="primary-button">Sign Up</button>
+            </Link>
+            <Link to="/Login">
+              <button className="primary-button">Login</button>
+            </Link>
+          </React.Fragment>
+        )}
       </div>
+      {/* ... (your existing code) */}
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
       </div>

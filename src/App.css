@@ -455,6 +455,24 @@ nav {
   text-decoration: none;
   color: rgb(5, 5, 5);
 }
+.instruction{
+  flex-basis: 50%;
+  text-align: justify;
+}
+.instruction p{
+  margin-top: 0.01rem;
+  justify-content: center;
+  font-weight: bold;
+}
+iframe{
+  height: 515px;
+  width: 100%;
+}
+.video{
+  width: 1000px;
+  margin: 4rem auto;
+  margin-left: -15rem;
+}
 
 @media (max-width: 1000px) {
   .navbar-links-container a {

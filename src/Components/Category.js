@@ -1,62 +1,50 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import Trend from './Trend'
-
+import React, { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
+import Trend from './Trend';
 
 const Category = () => {
-    const {name} = useParams()
-    // console.log(useParams())
+  const { name } = useParams();
 
-    const [data, setData] = useState([])
+  const [data, setData] = useState([]);
 
-    useEffect(() => {
-  
-      const fetchData = async () => {
-        const api = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${name}`)
-        const data = await api.json();
-  
-        // console.log(data);
-        setData(data.meals)
-        // console.log(data)
-      }
-  
-      fetchData();
-    }, [name])
+  useEffect(() => {
+    const fetchData = async () => {
+      const api = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${name}`);
+      const data = await api.json();
 
+      setData(data.meals);
+    };
+
+    fetchData();
+  }, [name]);
 
   return (
- <>
-
-<div style={{
-    width:'90%',
-    margin:'auto',
-    display:'grid',
-    gridTemplateColumns:'repeat(auto-fit, minmax(15rem, 1fr))',
-    gridGap:'1rem',
-    marginTop:'2rem'
-
-}}>
-
-
- {
-    data.map((d)=>{
-        return(
-            <Link to={`/${d.idMeal}`} className='link'>
-            <div style={{textAlign:'center'}}>
-                <div className="img">
-                    <img src={d.strMealThumb} alt="" style={{width:'13rem'}} />
-                </div>
-                 <h3>{d.strMeal}</h3>
+    <>
+      <div
+        style={{
+          width: '90%',
+          margin: 'auto',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(15rem, 1fr))',
+          gridGap: '1rem',
+          marginTop: '2rem',
+        }}
+      >
+        {data.map((d) => (
+          <Link to={`/${d.idMeal}`} className='link' key={d.idMeal}>
+            <div style={{ textAlign: 'center' }}>
+              <div className="img">
+                <img src={d.strMealThumb} alt="" style={{ width: '13rem' }} />
+              </div>
+              <h3>{d.strMeal}</h3>
             </div>
-            </Link>
-        )
-    })
- }
- </div>
+          </Link>
+        ))}
+      </div>
 
- <Trend/>
- </>
-  )
-}
+      <Trend />
+    </>
+  );
+};
 
-export default Category
+export default Category;

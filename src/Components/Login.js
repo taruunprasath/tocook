@@ -16,7 +16,6 @@ const Login = () => {
        const user = await firebase.auth().signInWithEmailAndPassword(email, pass)
        if(user)
        {
-         alert("Login Successful")
          navigate('/Home');
 
        }

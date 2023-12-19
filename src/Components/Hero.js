@@ -61,7 +61,7 @@ const Hero = () => {
           Why Us?
           </h1>
           <p className="primary-text">
-          Our webiste customer can get a clear ingredient quantities, step-by-step instructions with cooking details, nutritional information per serving, suggestions for substitutions, and engaging visuals. 
+          Our websitte customer can get a clear ingredient quantities, step-by-step instructions with cooking details, nutritional information per serving, suggestions for substitutions, and engaging visuals. 
           Enhance user experience with high-quality images or videos, fostering a sense of community through features like reviews and comments.
           </p>
         </div>

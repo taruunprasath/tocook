@@ -24,6 +24,7 @@ const Navbar = () => {
       navigate(`/search/${input}`);
   }
   const [openMenu, setOpenMenu] = useState(false);
+ // const[lbutton,setlbutton]=useState(true);
   const menuOptions = [
     {
       text: "Home",
@@ -65,9 +66,12 @@ const Navbar = () => {
         <Link to="About">About</Link>
         <Link to="Recipe">Recipes</Link>
         <Link to="Contact">Contact</Link>
-        <a href="/Signup">
+        {true && <a href="/Signup">
+          
         <button className="primary-button">Sign Up</button>
         </a>
+}
+
         <a href="/Login">
           <button className="primary-button">Login</button>
         </a>

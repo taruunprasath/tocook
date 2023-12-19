@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import './Signup.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import firebase from '../firebaseConfig';
 
 const Signup = () => {
   const [name,setName] = useState('')
   const [email,setEmail] = useState('')
   const [pass,setPass] = useState('')
+  const navigate = useNavigate();
 
   const submit = async(e) =>
   {
@@ -17,6 +18,7 @@ const Signup = () => {
        if(user)
        {
          alert("Account Created Successfully")
+         navigate("/Login")
        }
     } 
     catch (error) 

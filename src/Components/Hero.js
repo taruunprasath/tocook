@@ -70,7 +70,9 @@ const Hero = () => {
         </div>
       </div>
     </div>
+    <span>
      <Trend />
+     </span>
      <Footer />
     </div>
   )

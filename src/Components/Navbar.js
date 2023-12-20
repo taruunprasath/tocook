@@ -69,7 +69,6 @@ const Navbar = () => {
                         />
                     </form>
                 </div>
-      {/* ... (your existing code) */}
       <div className="navbar-links-container">
         <Link to="Home">Home</Link>
         <Link to="About">About</Link>

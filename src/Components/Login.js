@@ -5,41 +5,44 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from './AuthContext'; // Update the import
 import firebase from '../firebaseConfig';
 import { toast } from 'react-toastify';
+
 const Login = () => {
   const [email, setEmail] = useState('');
-  const [pass, setPass] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
   const { login } = useAuth(); // Use the useAuth hook
 
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const user = await firebase.auth().signInWithEmailAndPassword(email, pass);
+      const user = await firebase.auth().signInWithEmailAndPassword(email, password);
       if (user) {
         login(user); // Call the login function from useAuth
         navigate('/Home');
       }
     } catch (error) {
-      toast.error(error.message);
+      toast.error("Invalid Login");
     }
   };
 
   return (
-    <div>
-      <div className="main_container_signup">
-        <div className="header">
+    <div className="align">
+      <div className="grid align__item">
+        <div className="register">
           <h2>Login</h2>
+          <form onSubmit={submit} className="form">
+            <div className="form__field">
+              <input type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} />
+            </div>
+            <div className="form__field">
+              <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            </div>
+            <div className="form__field">
+              <input type="submit" value="Login" />
+            </div>
+          </form>
+          <p>Don't have an account? <Link to="/Signup"><span>Create Account</span></Link></p>
         </div>
-        <div className="box">
-          <input type="text" value={email} placeholder="E-Mail" onChange={(e) => setEmail(e.target.value)}></input>
-        </div>
-        <div className="box">
-          <input type="password" value={pass} placeholder="Password" onChange={(e) => setPass(e.target.value)}></input>
-        </div>
-        <p>
-          Don't Have an Account? <Link to="/Signup">Create Account</Link>
-        </p>
-        <button onClick={submit}>Login</button>
       </div>
     </div>
   );

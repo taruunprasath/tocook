@@ -23,11 +23,13 @@ const Footer = () => {
           <span><a href="https://www.linkedin.com/in/taruun-prasath-g-s-17022624b/">Taruun Prasath</a></span>
           <span><a href="https://www.linkedin.com/in/parvadaesh-s-eee-b16a29259/">Parvadaesh</a></span>
           <span><a href="https://www.linkedin.com/in/dhana-sekar-412b49257/">Dhanasekar</a></span>
+          <span><a href="https://www.linkedin.com/in/naveen-r-a85617278/">Naveen</a></span>
         </div>
         <div className="footer-section-columns">
           <span>+91 7904837587</span>
           <span>+91 8825730740</span>
           <span>+91 8098584040</span>
+          <span>+91 6383270401</span>
         </div>
         <div className="footer-section-columns">
           <span>Terms & Conditions</span>

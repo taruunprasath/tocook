@@ -33,8 +33,8 @@ function App() {
           <Route path='/search/:searchTerm' element={ <Search/>} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Myrecipe" element={<Myrecipe />} />
-            <Route path="/Signup" element={<Signup />} />
-            <Route path="/Login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/Login" element={<Login />} />
           </Routes>
           <ToastContainer />
         </div>

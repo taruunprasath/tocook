@@ -211,10 +211,11 @@ nav {
   margin-top: 10rem;
 }
 .footer-logo-container {
-  max-width: 170px;
+  max-width: 130px;
 }
 .footer-icons {
   margin-top: 0.5rem;
+
 
 }
 .footer-icons svg {
@@ -471,7 +472,7 @@ iframe{
 .video{
   width: 1000px;
   margin: 4rem auto;
-  margin-left: -15rem;
+  margin-left: -17rem;
 }
 
 @media (max-width: 1000px) {

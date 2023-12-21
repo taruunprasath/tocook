@@ -15,10 +15,6 @@ import InfoIcon from "@mui/icons-material/Info";
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import { Link, useNavigate } from 'react-router-dom'
-
-
-
-// Navbar.js
 import { useAuth } from './AuthContext';
 
 
@@ -32,7 +28,6 @@ const Navbar = () => {
       navigate(`/search/${input}`);
   }
   const [openMenu, setOpenMenu] = useState(false);
- // const[lbutton,setlbutton]=useState(true);
   const menuOptions = [
     {
       text: "Home",

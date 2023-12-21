@@ -1,4 +1,3 @@
-// AuthContext.js
 import React, { createContext, useContext, useState } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
@@ -10,14 +9,14 @@ export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
 
   const login = (userData) => {
-    // Your login logic here
+   
     
     setUser(userData);
     toast.success('Login successful!');
   };
 
   const logout = () => {
-    // Your logout logic here
+    
     setUser(null);
     toast.info('Logged out successfully.');
     navigate("/Login")

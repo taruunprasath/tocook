@@ -474,7 +474,10 @@ iframe{
   margin: 4rem auto;
   margin-left: -17rem;
 }
-
+.user-name {
+  font-weight: bold;
+  color: #3498db;
+}
 @media (max-width: 1000px) {
   .navbar-links-container a {
     margin-right: 1rem;

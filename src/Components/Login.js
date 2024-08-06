@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './signin.css';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from './AuthContext'; // Update the import
+import { useAuth } from './AuthContext'; 
 import firebase from '../firebaseConfig';
 import { toast } from 'react-toastify';
 
@@ -10,14 +10,14 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-  const { login } = useAuth(); // Use the useAuth hook
+  const { login } = useAuth(); 
 
   const submit = async (e) => {
     e.preventDefault();
     try {
       const user = await firebase.auth().signInWithEmailAndPassword(email, password);
       if (user) {
-        login(user); // Call the login function from useAuth
+        login(user); 
         navigate('/Home');
       }
     } catch (error) {

@@ -118,6 +118,7 @@ a {
     color: #fff;
     margin-bottom: 6rem;
     width: 100%;
+    cursor: pointer;
 }
 span{
     padding: 10px;

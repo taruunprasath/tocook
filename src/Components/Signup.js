@@ -1,4 +1,3 @@
-// Signup.js
 import React, { useState } from 'react';
 import './Signup.css';
 import { Link, useNavigate } from 'react-router-dom';
@@ -11,7 +10,7 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const submit = async (e) => {
+  const submit = async (e) => { 
     e.preventDefault();
     try {
       const user = await firebase.auth().createUserWithEmailAndPassword(email, password);

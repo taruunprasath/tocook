@@ -1,4 +1,3 @@
-// Navbar.js
 import React, { useState } from "react";
 import Logo from "../Assets/Logo.png";
 import { HiOutlineBars3 } from "react-icons/hi2";
@@ -14,7 +13,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-import { Link, useNavigate } from 'react-router-dom'
+  import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from './AuthContext';
 
 

@@ -1,4 +1,4 @@
-/* Base styles */
+
 * {
     box-sizing: border-box;
   }
@@ -6,7 +6,7 @@
   html {
     height: 100%;
   }
-    /* Alignment styles */
+
   .align {
     align-items: center;
     display: flex;
@@ -25,7 +25,7 @@
     margin-bottom: 2rem;
   }
   
-  /* Input styles */
+
   input {
     border: 0;
     font: inherit;
@@ -35,7 +35,7 @@
     color: #7e8ba3;
   }
   
-  /* Form styles */
+ 
   .form__field {
     margin-bottom: 1rem;
   }
@@ -50,14 +50,14 @@
     width: 100%;
   }
   
-  /* Grid styles */
+
   .grid {
     margin: 0 auto;
     max-width: 25rem;
     width: 100%;
   }
   
-  /* Heading styles */
+
   h2 {
     font-size: 2.75rem;
     font-weight: 100;
@@ -65,20 +65,18 @@
     text-transform: uppercase;
   }
   
-  /* SVG styles */
+ 
   svg {
     height: auto;
     max-width: 100%;
     vertical-align: middle;
   }
   
-  /* Link styles */
+  
   a {
     color: #31c2dc;
   }
-  
-  /* Register styles */
-  .register {
+    .register {
     box-shadow: 0 0 250px #ffffff;
     text-align: center;
     padding: 4rem 2rem;
